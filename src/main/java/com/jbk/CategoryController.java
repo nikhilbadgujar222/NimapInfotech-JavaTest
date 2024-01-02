@@ -22,7 +22,7 @@ public class CategoryController {
 	SessionFactory factory;
 	
 	
-// 1) API for getting category data in tabular format....	
+// 6) API for getting category data in tabular format....	
 	@RequestMapping("getCategory")
 	public ModelAndView getAllCategory(){
 		
@@ -41,7 +41,7 @@ public class CategoryController {
 		return tableview;
 	}
 	
-// 2)  API for adding new category to the category table.....
+// 7)  API for adding new category to the category table.....
 	
 	@RequestMapping("addCategory")
 	public String createNewCategory(@RequestBody Category ct) {
@@ -54,7 +54,7 @@ public class CategoryController {
 		return "category added sucessfully";
 	}
 	
-	// 8th api.. for Retriving the category by refering the id.....
+// 8) th api.. for Retriving the category by refering the id.....
 	@RequestMapping("getCategoryData/{ids}")
 	public List<Category> getDataByCategoryId(@PathVariable int ids) {
 	    List<Category> categoryList = new ArrayList<>();    
@@ -70,7 +70,7 @@ public class CategoryController {
 	}
 	
 	
-	//9th API for updating the Category by using categoryid..
+//9) th API for updating the Category by using categoryid..
 	
 	@RequestMapping("updateCat/{cid}")
 	public String updateData(@PathVariable int cid,@RequestBody Category cb) {
@@ -93,7 +93,7 @@ public class CategoryController {
 	}
 
 	
-	 //10th API for deleting the category by refering categoryid
+// 10) th API for deleting the category by refering categoryid
 	
 	
 	@RequestMapping("deleteCategoryData/{id}")
